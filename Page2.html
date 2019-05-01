@@ -45,20 +45,29 @@
 
 <h1 class="front-weight-bold h1">Welcome to the Department of Defence</h1>
 <div class="pagelayout">
-    <div class="col-sm-3">
-        <h2>About us</h2>
-    </div>
-    <div class="col-sm-12">
-        <h5>Here at the Department of Defence, we insure the safety of the Australian Population. The Australian Department of Defence consists of the Army, Navy and the Air force making sure we are protected by land, sea and air. </h5>
+     <div class="row">
+         <div class="col-sm-3">
+             <h2>About us</h2>
+         </div>
+         <div class="col-sm-12">
+             <h5>Here at the Department of Defence, we insure the safety of the Australian Population. The Australian Department of Defence consists of the Army, Navy and the Air force making sure we are protected by land, sea and air. </h5>
+         </div>
+
+    <div class="col-sm-9 maincontent">
+
+
+        <h3>Enter Pin to access missile launch system</h3>
+
+        <input id="pin" type="number">
+        <button type="button" onclick="checkPin()">Submit</button>
+        <p id="feedback">    </p>
+
     </div>
 </div>
 </div>
 
 
-<p>Please enter your pin to continue:</p>
-<input id="pin_code" type="text">
-<button type="button" onclick="check_pin_code()">Submit</button>
-<p id="power_usage"></p>
+
 
 </body>
 </html>
