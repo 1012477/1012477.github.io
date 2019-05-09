@@ -8,8 +8,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="Enviornment&Energy.js"></script>
 </head>
-<body>
+
+<body onLoad="powerUsage()" id="script">
 <nav <nav class="navbar navbar-expand-sm navbar-dark bg-faded" style="background: #002d88">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -47,6 +49,54 @@
   <img src="Images/enviroment-energy-logo.png" height="156.5" width="312.75"/>
 </div>
 <h2 class="front-weight-bold h1">Welcome to the Department of Environment and Energy</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="h3">Power Grid Usage</h3>
+            <p>Below is system information about the power grid in Canberra. Please note, this page refreshes every minute with the latest grid information.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4 class="h4 text-center">Power Station 1</h4>
+            <p><strong>Current Status:</strong> <a id="power1Status" value=""></a></p>
+            <p><strong>Current Powerload:</strong> <a id="power1Load" value="" style="color: "></a></p>
+            <p><strong>Current Percentage:</strong> <a id="power1Percentage" value=""></a>%</p>
+            <p><strong>Reccomendation on using second power station?</strong> <a id="power1Reccomendation" value="" style="color: "></a></p>
+        </div>
+        <div class="col-sm-6">
+            <h4 class="h4 text-center">Power Station 2</h4>
+            <p><strong>Current Status:</strong> <a id="power2Status" value=""></a></p>
+            <p><strong>Current Powerload:</strong> <a id="power2Load" value="" style="color: "></a></p>
+            <p><strong>Current Percentage:</strong> <a id="power2Percentage" value=""></a>%</p>
+            <form id="powerEnableForm" onSubmit="return submitHandler()">
+                <div class="form-row" id="toggle" style="visibility: hidden;">
+                    <div class="col-sm text-center">
+                        <button class="btn btn-success btn-xs" onClick="toggleGrid2()" id="powerButton">Enable Grid 2</button>
+                    </div>
+                </div>
+                <div class="form-row" id="login">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <h4 class="h4 text-center">Login to Enable Grid 2</h4>
+                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <div class="form-row" id="login1">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6 text-center">
+                        <button class="btn btn-success btn-xs" onClick="login()" id="powerLogin">Login</button>
+                        <div class="alert alert-danger" role="alert" id="error" style="display: none"></div>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
