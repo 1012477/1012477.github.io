@@ -8,8 +8,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="communication&arts.js"></script>
 </head>
-<body>
+
+<body onLoad="updateHeatmap()">
 <nav <nav class="navbar navbar-expand-sm navbar-dark bg-faded" style="background: #002d88">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -47,6 +49,39 @@
     <img src="Images/Comms-Arts-new.jpg" height="185" width="370"/>
 </div>
 
+<div class="container-fluid">
+    <h2 class="h2">Network Heatmap</h2>
+    <p><strong>NB:</strong> This page refreshes every 5 seconds.</p>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4 class="h4 text-center">NBN</h4>
+            <span class="glyphicon glyphicon-ok"></span><h1 id="nbnSymbol" class="glyphicon glyphicon-ok"></h1>
+            <p class="text-center">The NBN is currently performing <strong><a id="nbn"></a></strong>.</p>
+        </div>
+        <div class="col-sm-4">
+            <h4 class="h4 text-center">ADSL</h4>
+            <p class="text-center">The ADSL network is currently performing <strong><a id="adsl"></a></strong>.</p>
+        </div>
+        <div class="col-sm-4">
+            <h4 class="h4 text-center">Television</h4>
+            <p class="text-center">The Television signals are currently performing <strong><a id="tv"></a></strong>.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4 class="h4 text-center">Phone</h4>
+            <p class="text-center">The Phone service is currently performing <strong><a id="phone"></a></strong>.</p>
+        </div>
+        <div class="col-sm-4">
+            <h4 class="h4 text-center">Radio</h4>
+            <p class="text-center">The radio signals is currently performing <strong><a id="radio"></a></strong>.</p>
+        </div>
+        <div class="col-sm-4">
+            <h4 class="h4 text-center">Foxtel</h4>
+            <p class="text-center">The Foxtel signals are currently performing <strong><a id="foxtel"></a></strong>.</p>
+        </div>
+    </div>
+</div>
 
 
 
