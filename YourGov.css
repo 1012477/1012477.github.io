@@ -6,3 +6,9 @@
     background-color: #186fd1;
     color: #000000;
     text-align: center;
+
+#grad1 {
+    height: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, #00bfff, #0000ff); /* Standard syntax (must be last) */
+}
